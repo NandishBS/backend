@@ -16,6 +16,13 @@ app.get('/linkedin',(req,res)=>{
     res.send('this is my linkedin page')
 })
 
+app.get('/github',(req,res)=>{
+    res.json({
+        name:'nandish bs',
+        email : 'nandishbs11@gmail.com'
+    })
+})
+
 app.listen(port,()=>{
     console.log("app listening at http://localhost:"+port)
 })
