@@ -13,7 +13,9 @@ app.use((req, res, next) => {
     );
     next();
   });
-app.use(cors())
+app.use(cors({
+    origin:'*'
+}))
 
 app.get('/',(req,res)=>{
     res.setHeader("Access-Control-Allow-Origin", "*");
