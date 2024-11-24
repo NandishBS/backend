@@ -6,6 +6,7 @@ const app = express()
 const port = process.env.PORT
 
 app.use(cors())
+app.options('*', cors())
 
 app.get('/',(req,res)=>{
     res.send('this is home page')
