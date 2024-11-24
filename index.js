@@ -5,7 +5,7 @@ import bodyParser from 'body-parser'
 const app = express()
 const port = process.env.PORT
 
-app.use(cors())
+// app.use(cors())
 
 app.get('/',(req,res)=>{
     res.send('this is home page')
