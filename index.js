@@ -5,7 +5,9 @@ import bodyParser from 'body-parser'
 const app = express()
 const port = process.env.PORT
 
-app.use(cors())
+app.use(cors({
+    origin:'http://localhost:3000'
+}))
 app.use(bodyParser.urlencoded())
 app.get('/',(req,res)=>{
     res.send('this is home page')
