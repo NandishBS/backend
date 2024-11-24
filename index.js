@@ -6,12 +6,11 @@ const app = express()
 const port = process.env.PORT
 
 app.use(cors({
-    origin: 'http://localhost:3000', // Replace with your React app's origin
-    methods: ['GET', 'POST'], // Specify allowed HTTP methods
+    origin: 'http://localhost:3000',
+    methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed HTTP methods
+    credentials: true // If using cookies or authentication headers
   }));
 
-
-app.use(bodyParser.urlencoded())
 app.get('/',(req,res)=>{
     res.send('this is home page')
 })
@@ -36,9 +35,6 @@ app.get('/anime',(req,res)=>{
 })
 
 app.post('/post',(req,res)=>{
-    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
-    res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
     res.send({'msg' : 'your post request is recieved', yourrequest : req.body})
 })
 
