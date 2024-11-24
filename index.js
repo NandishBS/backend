@@ -5,12 +5,6 @@ import bodyParser from 'body-parser'
 const app = express()
 const port = process.env.PORT
 
-// app.use(cors({
-//     origin: 'http://localhost:3000',
-//     methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed HTTP methods
-//     credentials: true // If using cookies or authentication headers
-//   }));
-
 app.use(cors())
 
 app.get('/',(req,res)=>{
