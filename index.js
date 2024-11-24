@@ -23,6 +23,10 @@ app.get('/github',(req,res)=>{
     })
 })
 
+app.get('/anime',(req,res)=>{
+    res.send('iam an anime fan')
+})
+
 app.listen(port,()=>{
     console.log("app listening at http://localhost:"+port)
 })
