@@ -6,7 +6,8 @@ const app = express()
 const port = process.env.PORT
 
 app.use(cors({
-    origin:'http://localhost:3000'
+    origin:'http://localhost:3000',
+    optionsSuccessStatus: 200
 }))
 app.use(bodyParser.urlencoded())
 app.get('/',(req,res)=>{
