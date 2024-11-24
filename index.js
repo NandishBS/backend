@@ -36,6 +36,9 @@ app.get('/anime',(req,res)=>{
 })
 
 app.post('/post',(req,res)=>{
+    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
     res.send({'msg' : 'your post request is recieved', yourrequest : req.body})
 })
 
