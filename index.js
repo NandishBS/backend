@@ -6,9 +6,11 @@ const app = express()
 const port = process.env.PORT
 
 app.use(cors({
-    origin:'http://localhost:3000',
-    optionsSuccessStatus: 200
-}))
+    origin: 'http://localhost:3000', // Replace with your React app's origin
+    methods: ['GET', 'POST'], // Specify allowed HTTP methods
+  }));
+
+
 app.use(bodyParser.urlencoded())
 app.get('/',(req,res)=>{
     res.send('this is home page')
